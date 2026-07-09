@@ -1,121 +1,102 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Navbar from "./components/Navbar/Navbar";
 
+function Home() {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
+    <main>
+      <section
+        style={{
+          height: "100vh",
+          background:
+            "linear-gradient(135deg, #111111 0%, #1f1f1f 50%, #c89b3c 100%)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          color: "#fff",
+          textAlign: "center",
+          padding: "20px",
+        }}
+      >
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+          <h1
+            style={{
+              fontSize: "3rem",
+              marginBottom: "20px",
+            }}
+          >
+            Prathamesh Builders & Developers
+          </h1>
+
+          <p
+            style={{
+              fontSize: "1.2rem",
+              maxWidth: "700px",
+              margin: "0 auto",
+              lineHeight: "1.8",
+            }}
+          >
+            Building Trust. Creating Legacy.
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
       </section>
 
-      <div className="ticks"></div>
+      <section
+        style={{
+          height: "120vh",
+          padding: "80px 20px",
+          background: "#f8f8f8",
+        }}
+      >
+        <h2>Navbar Scroll Test</h2>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
+        <p>
+          Scroll this page to test:
+        </p>
+
+        <ul>
+          <li>Sticky Navbar</li>
+          <li>Scroll Shadow</li>
+          <li>Logo Scaling</li>
+          <li>Responsive Menu</li>
+        </ul>
       </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+function Placeholder({ title }) {
+  return (
+    <div
+      style={{
+        height: "100vh",
+        display: "grid",
+        placeItems: "center",
+        fontSize: "2rem",
+        fontWeight: "600",
+      }}
+    >
+      {title} Page
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<Placeholder title="About" />} />
+        <Route path="/legacy" element={<Placeholder title="Legacy" />} />
+        <Route path="/projects" element={<Placeholder title="Projects" />} />
+        <Route path="/gallery" element={<Placeholder title="Gallery" />} />
+        <Route path="/services" element={<Placeholder title="Services" />} />
+        <Route path="/contact" element={<Placeholder title="Contact" />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
