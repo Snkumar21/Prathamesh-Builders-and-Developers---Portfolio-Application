@@ -1,75 +1,69 @@
 import "./Navbar.css";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../../assets/logos/logos.png";
-import MobileMenu from "./MobileMenu";
-import TopHeader from "./TopHeader";
 
 const Navbar = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
-
+    const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 80) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
+            setScrolled(window.scrollY > 80);
         };
-
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-
     }, []);
 
-    return (
-    <>
-        <TopHeader />
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
 
+    return (
         <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
             <div className="container navbar-container">
+                {/* Logo */}
+                <NavLink to="/" className="logo" onClick={closeMenu}>
+                    <img src={logo} alt="Prathamesh Builders & Developers" />
+                </NavLink>
 
-                <div className="logo">
-                    <NavLink to="/">
-                        <img
-                            src={logo}
-                            alt="Prathamesh Builders & Developers"
-                        />
+                {/* Desktop Menu */}
+                <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+                    <NavLink to="/" onClick={closeMenu}>
+                        Home
                     </NavLink>
-                </div>
-
-                <nav className="desktop-menu">
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/about">About</NavLink>
-                    <NavLink to="/legacy">Legacy</NavLink>
-                    <NavLink to="/projects">Projects</NavLink>
-                    <NavLink to="/gallery">Gallery</NavLink>
-                    <NavLink to="/services">Services</NavLink>
-                    <NavLink to="/contact">Contact</NavLink>
+                    <NavLink to="/about" onClick={closeMenu}>
+                        About
+                    </NavLink>
+                    <NavLink to="/projects" onClick={closeMenu}>
+                        Projects
+                    </NavLink>
+                    <NavLink to="/services" onClick={closeMenu}>
+                        Services
+                    </NavLink>
+                    <NavLink to="/gallery" onClick={closeMenu}>
+                        Gallery
+                    </NavLink>
+                    <NavLink to="/contact" onClick={closeMenu}>
+                        Contact
+                    </NavLink>
                 </nav>
 
+                {/* Right Side */}
                 <div className="nav-right">
                     <button className="consult-btn">
                         Book Site Visit
                     </button>
-
-                    <FaBars
-                        className="hamburger"
-                        onClick={() => setIsOpen(true)}
-                    />
+                    <div
+                        className="menu-icon"
+                        onClick={() => setMenuOpen(!menuOpen)}
+                    >
+                        {menuOpen ? <FaTimes /> : <FaBars />}
+                    </div>
                 </div>
             </div>
         </header>
-
-        <MobileMenu
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-        />
-    </>
     );
 };
 
