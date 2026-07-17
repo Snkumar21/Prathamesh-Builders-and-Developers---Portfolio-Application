@@ -477,52 +477,6 @@ const Home = () => {
                     </button>
                 </div>
             </section>
-
-            {/* ========================================= */}
-            {/* FOOTER */}
-            {/* ========================================= */}
-
-            <footer className="footer">
-                <div className="container footer-grid">
-                    <div className="footer-about">
-                        <img src={Logo} alt="Logo" className="footer-logo" />
-                        <p>
-                            Prathamesh Builders & Developers is committed
-                            to creating exceptional residential and commercial
-                            spaces with quality, trust and innovation.
-                        </p>
-                    </div>
-                    <div>
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/">About</a></li>
-                            <li><a href="/">Projects</a></li>
-                            <li><a href="/">Gallery</a></li>
-                            <li><a href="/">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Services</h3>
-                        <ul>
-                            <li>Residential</li>
-                            <li>Commercial</li>
-                            <li>Construction</li>
-                            <li>Architecture</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Contact</h3>
-                        <p>📍 Pune, Maharashtra</p>
-                        <p>📞 +91 98765 43210</p>
-                        <p>✉ info@prathameshbuilders.com</p>
-                    </div>
-                </div>
-                <div className="footer-bottom">
-                    © 2026 Prathamesh Builders & Developers.
-                    All Rights Reserved.
-                </div>
-            </footer>
         </>
     );
 };
