@@ -549,6 +549,7 @@ section{
     opacity:.95;
 }
 .cta .gold-btn{
+    width: 200px;
     margin:auto;
     background:#fff;
     color:#C49A42;

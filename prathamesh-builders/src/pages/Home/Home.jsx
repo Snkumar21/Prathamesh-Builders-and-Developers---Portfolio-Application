@@ -1,5 +1,5 @@
 import "./Home.css";
-import Logo from "../../assets/logos/logo.png";
+import { Link } from "react-router-dom";
 import HeroImg from "../../assets/images/hero.jpeg";
 import AboutImg from "../../assets/images/about.jpeg";
 import {
@@ -44,17 +44,14 @@ const Home = () => {
                     </p>
 
                     <div className="hero-buttons">
-
                         <button className="gold-btn">
                             Explore Projects
                             <FaArrowRight />
                         </button>
-
-                        <button className="white-btn">
+                        <Link to="/contact" className="white-btn">
                             <FaPhoneAlt />
                             Contact Us
-                        </button>
-
+                        </Link>
                     </div>
 
                 </div>
@@ -472,9 +469,10 @@ const Home = () => {
                         Get in touch with our experts to know more about our
                         upcoming and ongoing projects.
                     </p>
-                    <button className="gold-btn">
-                        Contact Us
-                    </button>
+                    <Link to="/contact" className="gold-btn">
+                        Contact Page
+                        <FaArrowRight />
+                    </Link>
                 </div>
             </section>
         </>
