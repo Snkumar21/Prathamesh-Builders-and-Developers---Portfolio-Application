@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import Logo from "../../assets/logos/logos.png";
+import Logo from "../../assets/logos/circle logo.png";
 
 const Footer = () => {
     return (
@@ -60,7 +60,7 @@ const Footer = () => {
                 <div className="footer-contact">
                     <h3>Contact</h3>
                     <p>📍 Pune, Maharashtra</p>
-                    <p>📞 +91 98765 43210</p>
+                    <p>📞 +91 84216 75782</p>
                     <p>✉ info@prathameshbuilders.com</p>
                 </div>
             </div>
