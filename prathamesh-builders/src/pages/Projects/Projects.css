@@ -1,0 +1,457 @@
+/* ==========================================
+    PROJECTS HERO
+========================================== */
+.projects-hero{
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("../../assets/images/project_banner.jpeg") center/cover;
+    padding:180px 0 120px;
+    text-align:center;
+    color:#fff;
+}
+.projects-hero h1{
+    font-size:60px;
+    font-family:"Playfair Display", serif;
+    margin-bottom:20px;
+}
+.projects-hero p{
+    width:700px;
+    max-width:100%;
+    margin:auto;
+    line-height:1.9;
+    font-size:18px;
+    color:#f5f5f5;
+}
+
+/* ==========================================
+    FEATURED PROJECTS
+========================================== */
+.featured-projects{
+    padding:100px 0;
+    background:#fff;
+}
+.section-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+.section-heading span{
+    display:inline-block;
+    color:#C49A42;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+.section-heading h2{
+    font-size:46px;
+    color:#111;
+    font-family:"Playfair Display", serif;
+}
+
+/* ==========================================
+    PROJECT GRID
+========================================== */
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/* ==========================================
+    PROJECT CARD
+========================================== */
+.project-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+}
+.project-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+/* ==========================================
+    PROJECT IMAGE
+========================================== */
+.project-image{
+    position:relative;
+    overflow:hidden;
+}
+.project-image img{
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    transition:.5s;
+}
+.project-card:hover .project-image img{
+    transform:scale(1.08);
+}
+
+/* ==========================================
+    STATUS BADGE
+========================================== */
+.project-status{
+    position:absolute;
+    top:20px;
+    left:20px;
+    background:#C49A42;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
+}
+.project-status.completed{
+    background:#2e8b57;
+}
+
+/* ==========================================
+    PROJECT CONTENT
+========================================== */
+.project-content{
+    padding:30px;
+}
+.project-content h3{
+    font-size:28px;
+    color:#111;
+    margin-bottom:15px;
+    font-family:"Playfair Display", serif;
+}
+.project-content p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* ==========================================
+    PROJECT INFO
+========================================== */
+.project-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.project-info span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#555;
+    font-size:15px;
+}
+.project-info svg{
+    color:#C49A42;
+}
+
+/* ==========================================
+    BUTTON
+========================================== */
+.project-content .gold-btn{
+    margin-top:20px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 28px;
+    background:#C49A42;
+    color:#fff;
+    border-radius:40px;
+    transition:.4s;
+    font-weight:600;
+}
+.project-content .gold-btn:hover{
+    background:#111;
+}
+
+/* ==========================================
+    PROJECT AMENITIES
+========================================== */
+.project-amenities{
+    padding:100px 0;
+    background:#f8f8f8;
+}
+.amenities-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+.amenity-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+    font-size:42px;
+}
+.amenity-card:hover{
+    transform:translateY(-10px);
+}
+.amenity-card h3{
+    margin:20px 0 12px;
+    font-size:24px;
+    color:#111;
+}
+.amenity-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* ==========================================
+    WHY INVEST
+========================================== */
+.invest-section{
+    padding:100px 0;
+    background:#fff;
+}
+.invest-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+.invest-card{
+    padding:40px;
+    border-radius:20px;
+    background:#fff;
+    border-left:5px solid #C49A42;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+.invest-card:hover{
+    transform:translateY(-8px);
+}
+.invest-card h3{
+    margin-bottom:18px;
+    color:#111;
+    font-size:28px;
+    font-family:"Playfair Display", serif;
+}
+.invest-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* ==========================================
+    PROJECT TIMELINE
+========================================== */
+.project-timeline{
+    padding:100px 0;
+    background:#f8f8f8;
+}
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:60px auto 0;
+}
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:25px;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#C49A42;
+}
+.timeline-item{
+    display:flex;
+    align-items:flex-start;
+    gap:30px;
+    margin-bottom:50px;
+    position:relative;
+}
+.timeline-circle{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#C49A42;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    font-weight:600;
+    flex-shrink:0;
+    z-index:2;
+}
+.timeline-content{
+    background:#fff;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    width:100%;
+    transition:.4s;
+}
+.timeline-content:hover{
+    transform:translateY(-8px);
+}
+.timeline-content h3{
+    margin-bottom:12px;
+    color:#111;
+    font-size:24px;
+    font-family:"Playfair Display", serif;
+}
+.timeline-content p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* ==========================================
+    PROJECT CTA
+========================================== */
+.projects-cta{
+    padding:100px 0;
+    text-align:center;
+    background:linear-gradient(135deg,#C49A42,#b8892f);
+    color:#fff;
+}
+.projects-cta h2{
+    font-size:48px;
+    margin-bottom:20px;
+    font-family:"Playfair Display", serif;
+}
+.projects-cta p{
+    width:700px;
+    max-width:100%;
+    margin:0 auto 40px;
+    line-height:1.8;
+    font-size:17px;
+}
+.projects-cta .gold-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 35px;
+    background:#fff;
+    color:#C49A42;
+    border-radius:40px;
+    font-weight:600;
+    transition:.4s;
+}
+.projects-cta .gold-btn:hover{
+    background:#111;
+    color:#fff;
+}
+
+/* ==========================================
+    RESPONSIVE
+========================================== */
+@media(max-width:1100px){
+    .project-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:992px){
+    .amenities-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .invest-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+    .projects-hero{
+        padding:150px 0 90px;
+    }
+    .projects-hero h1{
+        font-size:42px;
+    }
+    .section-heading h2{
+        font-size:34px;
+    }
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+    .project-content{
+        padding:25px;
+    }
+    .project-content h3{
+        font-size:24px;
+    }
+    .amenities-grid{
+        grid-template-columns:1fr;
+    }
+    .amenity-card{
+        padding:35px 25px;
+    }
+    .invest-card{
+        padding:30px;
+    }
+    .invest-card h3{
+        font-size:24px;
+    }
+    .timeline::before{
+        left:20px;
+    }
+    .timeline-circle{
+        width:40px;
+        height:40px;
+        font-size:16px;
+    }
+    .timeline-content{
+        padding:22px;
+    }
+    .timeline-content h3{
+        font-size:20px;
+    }
+    .projects-cta{
+        padding:80px 0;
+    }
+    .projects-cta h2{
+        font-size:34px;
+    }
+    .projects-cta p{
+        font-size:15px;
+    }
+}
+
+@media(max-width:480px){
+    .projects-hero h1{
+        font-size:32px;
+    }
+    .projects-hero p{
+        font-size:15px;
+    }
+    .section-heading h2{
+        font-size:28px;
+    }
+    .project-content h3{
+        font-size:22px;
+    }
+    .project-image img{
+        height:220px;
+    }
+    .project-content .gold-btn{
+        width:100%;
+        justify-content:center;
+    }
+    .amenity-card{
+        font-size:36px;
+    }
+    .amenity-card h3{
+        font-size:20px;
+    }
+    .invest-card h3{
+        font-size:22px;
+    }
+    .timeline-item{
+        gap:18px;
+    }
+    .timeline-circle{
+        width:36px;
+        height:36px;
+        font-size:15px;
+    }
+    .timeline-content h3{
+        font-size:18px;
+    }
+    .projects-cta h2{
+        font-size:28px;
+    }
+    .projects-cta .gold-btn{
+        width:100%;
+    }
+}
