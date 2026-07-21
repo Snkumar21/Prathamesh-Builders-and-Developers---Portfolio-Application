@@ -2,7 +2,7 @@ import "./Navbar.css";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../../assets/logos/logos.png";
+import logo from "../../assets/logos/circle_logo.png";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
